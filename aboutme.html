@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+    
+  <head>
+    <title>About Me Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Quicksand:wght@300..700&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Forum&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Quicksand:wght@300..700&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+  </head>
+  
+
+  <!-- Not Acounting towards My Grade, I made this page for fun -->
+  <body>
+    <header>
+        <nav class = "main-nav main-container">
+            <div class = "logo"> 💖 TJB X GYF </div>
+            <audio id="myAudio" src="playlist.mp3"></audio>
+            <button class="play-button round-button" id="playPauseButton" onclick="PlayandPauseAudio()">▶</button>
+        </nav>
+        <div class = "header-content">
+            <h1>Overview</h1>
+            <div class = "header_button main-container">
+                <button><a href="recommendation.html">Best Memory</a></button>
+                <button><a href="ski_vlog.html">Daily Vlog</a></button>
+                <button><a href="index.html">Home Page</a></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- The typing effect -->
+    <div class="main-container type-writer-container">
+        <div class="typed-out">
+            <h1></h1>
+            <div class="caret"></div>
+        </div>
+    </div>
+
+    <!-- The Marquee Effect -->
+    <div class="decoration_container" id="pink">
+        <div class="content main-container">
+            <div class="item">TJB 🐷</div>
+            <div class="item">TJB 🐷</div>
+            <div class="item">TJB 🐷</div>
+            <div class="item">TJB 🐷</div>
+            <div class="item">TJB 🐷</div>
+            <div class="item">TJB 🐷</div>
+        </div>
+    </div>
+    <div class="decoration_container" id="teel">
+        <div class="content main-container" id="reverse">
+            <div class="item">GYF 🐶</div>
+            <div class="item">GYF 🐶</div>
+            <div class="item">GYF 🐶</div>
+            <div class="item">GYF 🐶</div>
+            <div class="item">GYF 🐶</div>
+            <div class="item">GYF 🐶</div>
+        </div>
+    </div>
+    <div class="decoration_container" id="pink">
+        <div class="content main-container">
+            <div class="item">GULU 💕</div>
+            <div class="item">GULU 💕</div>
+            <div class="item">GULU 💕</div>
+            <div class="item">GULU 💕</div>
+            <div class="item">GULU 💕</div>
+            <div class="item">GULU 💕</div>
+        </div>
+    </div>
+    <div class="decoration_container" id="teel">
+        <div class="content main-container" id = "reverse">
+            <div class="item">DUDU 😘</div>
+            <div class="item">DUDU 😘</div>
+            <div class="item">DUDU 😘</div>
+            <div class="item">DUDU 😘</div>
+            <div class="item">DUDU 😘</div>
+            <div class="item">DUDU 😘</div>
+        </div>
+    </div>
+    
+    <!-- A skiing mountain that shows my skiing journey visually -->
+    <div class="skiing_mountain_container">
+        <h1>WELCOME TO THE JOURNEY OF OUR LOVE STORY</h1>
+            <div class="image-section"></div>
+            <div class="tooltip-container" id="tooltip-container-1"> 
+                <button class="dot-button round-button">1</button>
+                <span class="tooltiptext">第一次見面肯定是那個網課啦，不過我們好像並沒有怎麼認識，也沒有什麼交集哇</span>
+            </div>
+            <div class="tooltip-container" id="tooltip-container-2"> 
+                <button class="dot-button round-button">2</button>
+                <span class="tooltiptext">通過DXY，我們一起去玩了密室，哈哈哈感覺密室是個很神奇的東東，我突然就對你有了好感</span>
+            </div>
+            <div class="tooltip-container" id="tooltip-container-3"> 
+                <button class="dot-button round-button">3</button>
+                <span class="tooltiptext">記得嗎！！你主動去牽我的手手！我主動來親你！嘿嘿</span>
+            </div>
+            <div class="tooltip-container" id="tooltip-container-4"> 
+                <button class="dot-button round-button">4</button>
+                <span class="tooltiptext">雖然現在有點點忙啦！，但是我愛你的心永遠不會變喔</span>
+            </div>
+            <div class="tooltip-container" id="tooltip-container-5"> 
+                <button class="dot-button round-button">5</button>
+                <span class="tooltiptext">咕嚕！不是下坡路的意思哇！只是我感覺我們的感情越來越平穩啦！沒有之前那麼跌宕起伏，我很喜歡我們現在這種狀態和關係</span>
+            </div>
+        <div class="cloud" id="right-cloud"></div>
+        <div class="cloud" id="left-cloud"></div>
+    </div>
+    
+    <script>
+        // Music Playing Code
+        const audio = document.getElementById('myAudio');
+        const playPauseButton = document.getElementById('playPauseButton');
+
+        function PlayandPauseAudio() {
+            if (audio.paused) {
+                audio.play();
+                playPauseButton.textContent = '▮▮'; // Change to pause symbol
+            } else {
+                audio.pause();
+                playPauseButton.textContent = '▶'; // Change to play symbol
+            }
+        }
+
+        // Text Typer Code
+        const textArray = [
+            "I love you so much",
+            "YOU ARE MINE",
+            "and",
+            "ITS ALWAYS YOU",
+            "Hope you enjoy this website!"
+        ];
+
+        const highlightArray = [
+            false,
+            true,
+            false,
+            true,
+            false
+        ];
+
+        const typedOutElement = document.querySelector('.typed-out h1');
+        const caretElement = document.querySelector('.caret');
+
+        let currentTextIndex = 0;
+        let currentCharIndex = 0;
+
+        function type() {
+            if (currentTextIndex < textArray.length) {
+                const currentText = textArray[currentTextIndex];
+                const isHighlighted = highlightArray[currentTextIndex];
+
+                // Create a span for the current character
+                const span = document.createElement('span');
+                span.innerHTML = currentText.charAt(currentCharIndex);
+                if (isHighlighted) {
+                    span.classList.add('highlight-text');
+                }
+                typedOutElement.appendChild(span);
+
+                currentCharIndex++;
+
+                // Update the position of the caret
+                caretElement.style.left = `${typedOutElement.offsetWidth}px`;
+
+                if (currentCharIndex > currentText.length) {
+                    currentTextIndex++;
+                    currentCharIndex = 0;
+
+                    // Add a line break before typing the next sentence
+                    if (currentTextIndex < textArray.length) {
+                        typedOutElement.innerHTML += '<br>'; // Line break
+                    }
+
+                    setTimeout(type, 1000); // pause before next text
+                } else {
+                    setTimeout(type, Math.random() * (200 - 50) + 50); // random typing speed
+                }
+            }
+        }
+
+        type();
+
+    </script>
+  </body>
+</html>

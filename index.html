@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    
+  <head>
+    <title>Home Page</title>
+    <meta charset = "HTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+    <header>
+        <nav class = "main-nav main-container">
+            <div class = "logo"> 💖 TJB X GYF </div>
+            <audio id="myAudio" src="playlist.mp3"></audio>
+            <button class="play-button round-button" id="playPauseButton" onclick="PlayandPauseAudio()">▶</button>
+        </nav>
+        <div class = "header-content">
+            <h1>Overview</h1>
+            <div class = "header_button main-container">
+                <button><a href="recommendation.html">Best Memory</a></button>
+                <button><a href="ski_vlog.html">Daily Vlog</a></button>
+                <button><a href="aboutme.html">About Us</a></button>
+            </div>
+        </div>
+    </header>
+    <div class = "info">
+        <h1>Welcome to the Home Page!</h1>    
+        <!-- The slideshow of different skiing resort -->
+        <div class="main-container" id="ski-resort-heading">
+            <h2>TJB 的 Top 3 Memory:</h2>
+            <button id="to-view-more-button"><a href="recommendation.html">View More...</a></button>
+        </div>
+        <div class="image-container main-container">
+            <img src="love.JPG" alt="Niseko"/></a>
+            <div class="overlay-text">小寶寶的TOP Memory</div>
+            <button class="arrow-buttons left" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="arrow-buttons right" onclick="plusDivs(+1)">&#10095;</button>
+        </div>
+        <div class="image-container main-container">
+            <img src="love2.JPG" alt="Jiangjun"/></a>
+            <div class="overlay-text">小寶寶的TOP Memory</div>
+            <button class="arrow-buttons left" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="arrow-buttons right" onclick="plusDivs(+1)">&#10095;</button>
+        </div>
+        <div class="image-container main-container">
+            <img src="love3.JPG" alt="Les 3 Vallées"/></a>
+            <div class="overlay-text">小寶寶的TOP Memory</div>
+            <button class="arrow-buttons left" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="arrow-buttons right" onclick="plusDivs(+1)">&#10095;</button>
+        </div>
+        <div class="page-number" id="page-number">Page 1 out of 3</div>
+
+    <h2>Favourite Video</h2>
+    <!-- 3 skiing tutorials that may be useful -->
+        <div class="main-container" id="tutorial-video-container">
+            <div class="tutorial-video-item">
+                <a href="https://www.youtube.com/watch?v=SK6SCATFVlg" target="_blank">
+                    <video autoplay loop muted><source src="vid1.MP4" type="video/mp4"></video>
+                </a>
+                <div class="overlay-text"><p>GYF周年部署VLOG！</p></div>
+            </div>
+            <div class="tutorial-video-item">
+                <a href="https://drive.google.com/file/d/1sXuUtAXfSAtV1kXUBu6f8l6suwFGsVEt/view?usp=sharing" target="_blank">
+                    <video autoplay loop muted><source src="vid2.mp4" type="video/mp4"></video>
+                </a>
+                <div class="overlay-text"><p>TJB的生日惊喜视频！</p></div>
+            </div>
+            <div class="tutorial-video-item">
+                <a href=" " target="_blank">
+                    <video autoplay loop muted><source src="vid3.mp4" type="video/mp4"></video>
+                </a>
+                <div class="overlay-text"><p>咕噜咕噜！七夕节傻傻视频！</p></div>
+            </div>
+        </div>
+        <!-- Comments sections for skiing lovers, or just my friends and family -->
+        <h2>Read and Leave a Comment:</h2>
+        <div class="main-container" id="comment-container">
+            <div class="comment-form">
+                <form action="submit_sucess.html">
+                    <label for="name">Your Name:</label><br>
+                    <input class="comment-element" type="text" id="name" name="fname" placeholder="Enter your name" required><br> 
+                    
+                    <label for="comment">Your Comment:</label><br>
+                    <textarea class="comment-element" id="comment" name="comment" rows="4" placeholder="Type your comment here..." required></textarea><br>
+                    
+                    <button>Submit</button>
+                </form>
+            </div>
+            <div class="comments-list">
+                <h2>来自GYF小包的留言</h2>
+                <div class="comment">
+                    <div class="comment-user">Comment #1: 爱你的小宝宝</div>
+                    <p>我是世界上最爱你的小宝宝！！！没有之一！希望老公愉快滴渡过七夕节哦</p>
+                </div>
+                <div class="comment">
+                    <div class="comment-user">Comment #2: 老婆大人</div>
+                    <p>记得！最重要的就是要永远都超级超级爱我！不可以对我不好！小宝宝会不开心的！</p>
+                </div>
+            </div>
+        </div>
+    </div>     
+
+    <footer></footer>  
+    <script>
+        // SlideShow Code
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("image-container");
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length; }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none"; // Hide all slides
+            }
+            x[slideIndex - 1].style.display = "block"; // Show current slide
+            document.getElementById("page-number").textContent = "Page " + slideIndex + " out of " + x.length;
+        }
+
+        // Music Playing Code
+        const audio = document.getElementById('myAudio');
+        const playPauseButton = document.getElementById('playPauseButton');
+
+        function PlayandPauseAudio() {
+            if (audio.paused) {
+                audio.play();
+                playPauseButton.textContent = '▮▮'; // Change to pause symbol
+            } else {
+                audio.pause();
+                playPauseButton.textContent = '▶'; // Change to play symbol
+            }
+        }
+    </script>
+  </body>
+
+</html>
