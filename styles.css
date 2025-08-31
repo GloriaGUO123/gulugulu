@@ -1,0 +1,883 @@
+/* General Setting for All Pages*/
+:root {
+    --color-pink: rgb(252, 209, 209);
+    --color-blue: rgb(174, 225, 225);
+    --shadow-color: rgba(0, 0, 0, 0.1); 
+    --spacing-small: 10px;
+    --spacing-medium: 20px; 
+    --spacing-large: 40px; 
+}
+
+html {
+    background: rgb(219, 233, 246);
+    font-family: "Forum", serif;
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
+.info{
+    padding: var(--spacing-medium);
+    margin: var(--spacing-medium) 
+}
+
+h1 {
+    font-family: "Playfair Display SC", serif;
+    font-size: 2.6em;
+}
+
+h2 {
+    font-family: "Roboto Slab", serif;
+    font-size: 1.3em;
+    margin-top: var(--spacing-large)
+}
+
+ul{
+    list-style-type: circle;
+    padding-left: var(--spacing-medium);
+    line-height: 1.6;
+}
+
+.main-container {
+    display: flex;
+}
+
+.main-nav {
+    left: 0;
+    right: 0;
+    top: 0;
+    padding: 1rem 3rem;
+    position: fixed;
+    background-color: var(--color-pink);
+    z-index: 100;
+}
+
+.logo {
+    font-weight: 700;
+    letter-spacing: -.02em;
+}
+
+header {
+    font-family: "Playfair Display SC", serif;
+    background-color: var(--color-blue);
+    height: 150px;
+    padding-bottom: 90px;
+    margin-top: 50px;
+    text-align: center;
+    font-size: 130%;
+    padding-top:25px;
+}
+
+.header_button {
+    justify-content: center;
+    gap: var(--spacing-small);
+    margin-left: var(--spacing-small);
+}
+
+.header_button button{
+    margin-right: 25px;
+    padding: var(--spacing-small);
+    box-shadow: 0 2px 5px var(--shadow-color);
+}
+
+button {
+    display: flex;
+    font-family: "Forum", serif;
+    border: none; 
+    padding: var(--spacing-small) 15px; 
+    font-size: 18px; 
+    cursor: pointer; 
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px
+}
+
+.round-button {
+    border-radius: 50%
+}
+
+button:hover {
+    background-color: #e0e0e0;
+}
+
+.arrow-buttons {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+}
+
+.arrow-buttons.left {
+    left: var(--spacing-medium); 
+}
+
+.arrow-buttons.right {
+    right: var(--spacing-medium); 
+}
+
+
+video {
+    width: 100%
+}
+
+.play-button {
+    background-color: var(--color-blue);
+    position: absolute; 
+    bottom: var(--spacing-small);
+    right: var(--spacing-medium);
+    width: var(--spacing-large);
+    height: var(--spacing-large);
+}
+
+.play-button:hover {
+    background-color: rgb(154, 212, 212);
+}
+
+.round-edge-element {
+    border-radius: 5px
+}
+
+footer {
+    background-color: var(--color-blue); 
+    color: #fff; 
+    padding: var(--spacing-small); 
+    text-align: center; 
+    height: 140px;
+}
+
+a:link, a:visited, a:active {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+  }
+  
+  
+a:hover {
+    text-decoration: underline;
+}
+
+/* Home Page */
+.overlay-text {
+    background: linear-gradient(0deg, #000000e6 0, #0009 50%, #0003);
+    color: #fff;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem;
+    position: absolute;
+    line-height: 1.2;
+    height: 10%;
+    align-items: center;
+}
+
+/* 1. Skiing Resort Section */
+#ski-resort-heading {
+    align-items: center;
+}
+
+#ski-resort-heading h2 {
+    margin: 0;
+    margin-right: var(--spacing-small);
+}
+
+#to-view-more-button {
+    height:var(--spacing-large);
+    margin-bottom: var(--spacing-small);
+    background-color: var(--color-pink);
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    max-height: 300px;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container img {
+    width: 100vw; 
+}
+
+.page-number {
+    margin-top: var(--spacing-small);
+    color: #333; 
+    text-align: right; 
+}
+
+/* 2. Skiing Tutorial Section */
+#tutorial-video-container{
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.tutorial-video-item {
+    position: relative;
+    width: 100%;
+}
+
+/* 3. Comment Section */
+#comment-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px var(--spacing-small) var(--shadow-color);
+}
+
+.comment-form {
+    flex: 1.3; 
+    padding: var(--spacing-medium);
+    border-right: 1px solid #ccc; 
+    margin-top: var(--spacing-small)
+}
+
+.comment-form input,
+.comment-form textarea {
+    width: 90%;
+    margin: var(--spacing-medium);
+    padding: var(--spacing-small);
+    border: 1px solid #ccc;
+    resize: none;
+    border-radius: 5px
+}
+
+.comment-form textarea {
+    height: 150px;
+}
+
+.comment-form input:focus,
+.comment-form textarea:focus {
+    border: 2px solid var(--color-pink);
+    outline: none; 
+}
+
+.comment-form button {
+    background-color: var(--color-blue);
+    padding: var(--spacing-small) var(--spacing-medium); 
+}
+
+.comments-list {
+    flex: 1; 
+    padding: var(--spacing-medium);
+}
+
+.comments-list h2 {
+    margin-top: var(--spacing-small);
+}
+
+.comment {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin: var(--spacing-large) 0;
+    padding: var(--spacing-small);
+    height: 100px
+}
+
+.comment-user {
+    font-weight: bold;
+}
+
+
+
+/* Skiing Personal Page */
+/* 1. Calendar */
+#calendar-container {
+    flex-direction: column;
+    max-width: 1000px;
+    box-shadow: 0 4px var(--spacing-medium) var(--shadow-color);
+    border-radius: var(--spacing-small);
+    overflow: hidden;
+    background-color: #fff;
+}
+
+#calendar-header-container {
+    justify-content: space-between;
+    background-color: var(--color-pink);
+    position: relative;
+    border-radius: 5px;
+    border-bottom: 2px solid #ddd;
+    align-items: center;
+}
+
+.calendar-header {
+    flex: 1;
+    text-align: center;
+    padding: var(--spacing-medium);
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.calendar-days, .calendar-dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    margin: var(--spacing-small);
+}
+
+.calendar-days div, .calendar-dates div{
+    padding: var(--spacing-medium);
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.calendar-days div{
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+.calendar-dates div{
+    background-color: white;
+}
+
+.calendar-dates div:hover {
+    transform: scale(1.05);
+    background-color: rgb(246, 247, 249);
+}
+
+.ski-season {
+    border: 1px solid rgb(107, 194, 248) !important;
+}
+
+.today {
+    background-color: var(--color-pink) !important;
+}
+
+.ski-day {
+    background-color: lightblue !important;
+}
+
+#skiing-calender-heading-container {
+    align-items: center;
+}
+
+#info-button {
+    width: 80px;
+    height: var(--spacing-large);
+    background-color:var(--color-pink);
+    box-shadow: 0 2px 5px var(--shadow-color);
+    margin-left: var(--spacing-medium);
+}
+
+#info-modal {
+    display: none; 
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: var(--spacing-medium);
+    border: 1px solid #888;
+    width: 400px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    cursor: pointer;
+}
+
+/* This is for video and photo */
+div.gallery {
+    margin: 5px;
+    float: left;
+    overflow: hidden;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    border-radius: var(--spacing-small);
+}
+
+div.gallery:hover {
+    filter: brightness(0.9);
+}
+
+/* 2. Skiing Vlogs Section */
+#vlog-container{
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    flex-wrap: nowrap;
+}
+
+video.vlog {
+    width: 300px;
+    flex-shrink: 0;
+}
+
+.horizontal_scroll{
+    margin: var(--spacing-medium) auto;
+    padding: 15px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+/* 3. Photo Gallery */
+div.photo-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1200px;
+    gap: 50px;
+    box-sizing: border-box
+}
+
+#photo_gallery {
+    width: 300px;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+    background-color: white;
+}
+
+/* About Me Page */
+/* 1. Typing Effect */
+.type-writer-container {
+    height: 760px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    transform: rotate(-2deg);
+}
+
+.typed-out{
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    position: relative;
+  }
+
+.caret {
+    position: absolute;
+    right: 0;
+    width: 2px;
+    height: 1.2em;
+    animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+    from, to { background-color: transparent }
+    50% { background-color: black; }
+}
+
+.typed-out h1 {
+    font-size: 3.5vw;
+    font-weight: 600;
+    letter-spacing: -.02em;
+    line-height: 1.3;
+    margin: 0;
+}
+
+.highlight-text {
+    transform: translateY(-2px);
+    font-size: 5.5vw;
+    color: rgb(218, 155, 155)
+}
+
+/* 2. The Marquee Effect*/
+.decoration_container {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
+    border: 1px solid rgba(0, 0, 0, .15);
+    overflow: hidden;
+    height: 160px;
+    width: 100%;
+}
+
+#pink {
+    transform: rotate(-2.5deg);
+    background-color: var(--color-pink);
+}
+
+#teel {
+    transform: rotate(2.5deg);
+    background-color: rgb(196, 234, 243);
+}
+
+#reverse {
+    animation-direction: reverse;
+}
+
+.content{
+    animation: marquee 30s linear infinite;
+    white-space: nowrap;
+    will-change: transform;
+}
+
+.item {
+    font-size: 7rem;
+    font-weight: 700;
+    gap: 1.5rem;
+    letter-spacing: -0.02em;
+    padding-right: 3rem;
+    text-transform: uppercase;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* 3. Skiing Mountain */
+.skiing_mountain_container {
+    padding-top: var(--spacing-large);
+    background-image: url('assets/mountain.jpg');
+    height: 760px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.dot-button {
+    position: absolute; 
+    width: var(--spacing-large); 
+    height: var(--spacing-large); 
+    background-color: var(--color-pink);
+    border: 2px solid #fff;
+    box-shadow: 0 2px 5px var(--shadow-color);
+}
+
+#tooltip-container-1 {
+    top: 60%; left: 20%;
+}
+
+#tooltip-container-2 {
+    top: 25%; left: 35%;
+}
+
+#tooltip-container-3 {
+    top: -3%; left: 48%;
+}
+
+#tooltip-container-4 {
+    top: 25%; left: 60%;
+}
+
+#tooltip-container-5 {
+    top: 60%; left: 75%;
+}
+
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+}
+  
+.tooltiptext {
+    position: absolute;
+    visibility: hidden;
+    width: 200px;
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    z-index: 103;
+    transform: translateX(20%);
+}
+
+.tooltip-container:hover .tooltiptext {
+    visibility: visible;
+}
+
+.cloud, .cloud:before, .cloud:after {
+    position: absolute;
+    width: 70px;
+    height: var(--spacing-large);
+    background: #fff;
+    border-radius: 100px / 50px;
+}
+
+.cloud { 
+    bottom: 400px;
+    animation: cloud 20s infinite linear;
+}
+
+.cloud:before {
+    content: '';
+    left: 50px;
+}
+
+.cloud:after {
+    content: '';
+    left: 25px;
+    top: -10px;
+}
+
+#left-cloud {
+    animation: cloud 20s infinite linear;
+    bottom: 400px;
+    left: 10%;
+}
+
+#right-cloud {
+    animation: cloud-reverse 20s infinite linear;
+    bottom: 450px;
+    right: 10%;
+}
+
+@keyframes cloud {
+    0%   { left: -100px; }
+    100% { left: 100%; }
+}
+
+@keyframes cloud-reverse {
+    0%   { right: -100px; }
+    100% { right: 100%; }
+}
+
+/* Recommendation Page */
+/* 1. Top Ski Resort Recommendation */
+#resort-recommendation-card-container {
+    align-items: center;
+    flex-direction: column;
+}
+
+#resort-recommend-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px var(--spacing-small) var(--shadow-color);
+    padding: var(--spacing-medium);
+    max-width: 900px;
+    margin: var(--spacing-medium);
+    padding: var(--spacing-large);
+}
+
+.resort-card-image {
+    flex: 1.25;
+    margin-right: var(--spacing-medium);
+}
+
+.resort-card-image img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.resort-card-content {
+    flex: 1;
+}
+
+.resort-card-content p {
+    margin: var(--spacing-medium) 0;
+}
+
+.resort-card-content strong {
+    color:  rgb(108, 193, 193);
+}
+
+.rating {
+    font-size: 24px;
+}
+
+#checked {
+    color: rgb(244, 211, 80);
+  }
+
+#heart-button {
+    background-color: white;
+    color: rgb(232, 179, 188);
+    border: 1px solid black;
+    width: var(--spacing-large);
+    height: var(--spacing-large);
+    font-size: var(--spacing-medium);
+}
+
+#heart-button:hover {
+    background-color: #f9eae9;
+    transform: scale(1.1);
+}
+
+/* 2. Sidebar */
+#Sidebar {
+    display: none;
+    position: absolute;
+    width: 25%;
+    background-color: #ffffff;
+    z-index: 1;
+    height: 100%;
+    padding: var(--spacing-small);
+    overflow-y: auto;
+}
+
+#Main-Content {
+    transition: margin-left 0.3s, padding-left 0.3s;
+    width: 100%;
+    padding-left: 0;
+}
+
+#Sidebar strong {
+    color: rgb(222, 160, 170);
+    text-decoration: underline;
+}
+
+#Sidebar ul {
+    list-style-type: none;
+}
+
+/* Message Successful Page */
+.message-container {
+    background-color: #ECE2E1;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 90%;
+}
+
+.icon {
+    font-size: 50px;
+    color: #AEE1E1;
+    margin-bottom: 20px;
+}
+
+#sucess-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #FCD1D1;
+    color: #333;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+    .header-content {
+        display: flex;
+    }
+
+    .header_button{
+        flex-direction: column; 
+        align-items: flex-start;
+    }
+
+    header h1 {
+        text-align: left;
+        margin-left: var(--spacing-small);
+        margin-right: var(--spacing-small);
+    }
+
+    .image-container img {
+        height: 220px
+    }
+
+    #tutorial-video-container {
+        flex-direction: column;
+    }
+
+    .tutorial-video-item {
+        flex: 1;
+    }
+
+    #comment-container {
+        display: block;
+    }
+
+    .calendar-days div, .calendar-dates div {
+        padding: 13px; 
+    }
+
+    div.photo-container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #photo_gallery {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 1450px) {
+    div.photo-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: var(--spacing-medium) auto;
+    }
+
+    #photo_gallery {
+        width: 300px;
+    }
+
+    .skiing_mountain_container {
+        height: 500px;
+    }
+    .image-section {
+        background-image: url('assets/mountain_responsive.jpg');
+    }
+
+    .skiing_mountain_container h1 {
+        font-size: 15px
+    }
+
+    .tooltip-container {
+        margin: var(--spacing-small) 0;
+    }
+
+    #tooltip-container-4 .tooltiptext, #tooltip-container-5 .tooltiptext{
+        transform: translateX(-100%)
+    }
+
+    #resort-recommend-card {
+        flex-direction: column; 
+        max-width: 50%
+    }
+}
+
+@media (max-width: 1000px) {
+    #tooltip-container-3 {
+        top: 3%
+    }
+}
+
+@media (max-width: 700px) {
+    #tooltip-container-3 {
+        top: 10%;
+    }
+}
+
+@media (max-width: 500px) {
+    #tooltip-container-5{
+        left: 85%;
+    }
+
+    #tooltip-container-1{
+        left: 5%; 
+    }
+}
