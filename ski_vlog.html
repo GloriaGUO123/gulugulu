@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+    
+  <head>
+    <title>Skiing Vlog Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Quicksand:wght@300..700&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Forum&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Quicksand:wght@300..700&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <header>
+        <nav class = "main-nav main-container">
+            <div class = "logo"> 💖 TJB X GYF </div>
+            <audio id="myAudio" src="playlist.mp3"></audio>
+            <button class="play-button round-button" id="playPauseButton" onclick="PlayandPauseAudio()">▶</button>
+        </nav>
+        <div class = "header-content">
+            <h1>Overview</h1>
+            <div class = "header_button main-container">
+                <button><a href="recommendation.html">Best Memory</a></button>
+                <button><a href="index.html">Home Page</a></button>
+                <button><a href="aboutme.html">About Us</a></button>
+            </div>
+        </div>
+    </header>
+
+    <div class = "info">
+        <h1>DO YOU REMEMBER THIS?</h1>
+    <!-- The Skiing Calendar that Records my Skiing Journey -->
+        <div class="main-container" id="skiing-calender-heading-container">
+            <h2>About Our Journey</h2>
+            <button id="info-button">KEYS</button>
+        </div>
+        <div id="info-modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h2>Key Information</h2>
+                <p>Overview: This calendar is designed to record our love journey and the important dates of each year.</p>
+                <h2>KEYS:</h2>
+                <ul>
+                    <li>Today: Highlighted in pink</li>
+                    <li>Important Dates: Highlighted in light blue</li>
+                    <li>Our Summer Holiday (Approximate): Outlines with a blue border</li>
+                </ul>
+            </div>
+        </div>
+        <div class="main-container" id="calendar-container">
+            <div class="main-container" id="calendar-header-container">
+                <button id="prev-month" class="arrow-buttons left">&#10094;</button>
+                <div class="calendar-header" id="month-year">November 2024</div>
+                <button id="next-month" class="arrow-buttons right">&#10095;</button>
+            </div>
+            <div class="calendar-days">
+                <div>Sun</div>
+                <div>Mon</div>
+                <div>Tue</div>
+                <div>Wed</div>
+                <div>Thu</div>
+                <div>Fri</div>
+                <div>Sat</div>
+            </div>
+            <div class="calendar-dates" id="calendar-dates"></div>
+        </div>
+    
+    <!-- My Skiing Vlogs which are Horizontally Laid Out -->
+    <h2>Recent Vlogs</h2>
+    <div class = "horizontal_scroll">
+        <div class = "main-container" id="vlog-container">
+            <div class="gallery">
+                <video class = "vlog" autoplay loop muted><source src="vlog1.mp4" type="video/mp4"></video>
+                <div class="desc">海边逛街</div>
+            </div>
+            <div class="gallery">
+                <video class = "vlog" autoplay loop muted><source src="vlog2.mp4" type="video/mp4"></video>
+                <div class="desc">坐摩天轮哇！520</div>
+            </div>
+            <div class="gallery">
+                <video class = "vlog" autoplay loop muted><source src="vlog3.mp4" type="video/mp4"></video>
+                <div class="desc">拍手！！！！那个好吃的OMAKASE</div>
+            </div>
+            <div class="gallery">
+                <video class = "vlog" autoplay loop muted><source src="vlog4.mp4" type="video/mp4"></video>
+                <div class="desc">咳咳咳</div>
+            </div>
+            <div class="gallery">
+                <video class = "vlog" autoplay loop muted><source src="vlog5.mp4" type="video/mp4"></video>
+                <div class="desc">在图书馆生气的宝宝</div>
+            </div>
+            <div class="gallery">
+                <video class = "vlog" autoplay loop muted><source src="vlog6.mp4" type="video/mp4"></video>
+                <div class="desc">世界之窗拉着我！！</div>
+            </div>
+            <div class="gallery">
+                <video class = "vlog" autoplay loop muted><source src="vlog7.mp4" type="video/mp4"></video>
+                <div class="desc">开车车！好好玩</div>
+            </div>
+            <div class="gallery">
+                <video class = "vlog" autoplay loop muted><source src="vlog8.mp4" type="video/mp4"></video>
+                <div class="desc">美丽的小宝宝在和你吃酸辣粉</div>
+            </div>
+        </div>
+    </div>
+    <!-- Photo Gallery of the Images that I took in Different Skiing Resorts -->
+    <h2>Photo Gallery:</h2>
+    <div class="photo-container">
+        <div class="gallery" id="photo_gallery">
+            <img src="photo1.JPG" alt="Photo Placeholder">
+            <div class="desc">20.12.2024</div>
+        </div>
+        <div class="gallery" id="photo_gallery">
+            <img src="photo2.JPG" alt="Photo Placeholder">
+            <div class="desc">18.12.2024</div>
+        </div>
+        <div class="gallery" id="photo_gallery">
+            <img src="photo3.JPG" alt="Photo Placeholder">
+            <div class="desc">弟弟超級喜歡這張 29.09.2024</div>
+        </div>
+        <div class="gallery" id="photo_gallery">
+            <img src="photo4.JPG" alt="Photo Placeholder">
+            <div class="desc">21.09.2024</div>
+        </div>
+        <div class="gallery" id="photo_gallery">
+            <img src="photo5.JPG" alt="Photo Placeholder">
+            <div class="desc">姐姐超級喜歡這張 05.08.2024 </div>
+        </div>
+        <div class="gallery" id="photo_gallery">
+            <img src="photo6.JPG" alt="Photo Placeholder">
+            <div class="desc">異國戀——英國 07.08.2025</div>
+        </div>
+        <div class="gallery" id="photo_gallery">
+            <img src="photo7.JPG" alt="Photo Placeholder">
+            <div class="desc">11.05.2025</div>
+        </div>
+        <div class="gallery" id="photo_gallery">
+            <img src="photo8.jpg" alt="Photo Placeholder">
+            <div class="desc">11.05.2025</div>
+        </div>
+        <div class="gallery" id="photo_gallery">
+            <img src="photo9.jpg" alt="Photo Placeholder">
+            <div class="desc">小寶寶的生日 17.05.2025</div>
+        </div>
+        <div class="gallery" id="photo_gallery">
+            <img src="photo10.jpg" alt="Photo Placeholder">
+            <div class="desc">17.05.2025</div>
+        </div>
+        <div class="gallery" id="photo_gallery">
+            <img src="photo11.jpg" alt="Photo Placeholder">
+            <div class="desc">08.03.2025</div>
+        </div>
+        <div class="gallery" id="photo_gallery">
+            <img src="photo12.jpg" alt="Photo Placeholder">
+            <div class="desc">太平山頂 27.06.2025</div>
+        </div>
+        <div class="gallery" id="photo_gallery">
+            <img src="photo13.jpg" alt="Photo Placeholder">
+            <div class="desc">29.09.2024</div>
+        </div>
+        <div class="gallery" id="photo_gallery">
+            <img src="photo14.jpg" alt="Photo Placeholder">
+            <div class="desc">密室 16.12.2023</div>
+        </div>
+        <div class="gallery" id="photo_gallery">
+            <img src="photo15.jpg" alt="Photo Placeholder">
+            <div class="desc">畢業🎓 08.06.2025</div>
+        </div>
+        <div class="gallery" id="photo_gallery">
+            <img src="photo16.jpg" alt="Photo Placeholder">
+            <div class="desc">15.03.2025</div>
+        </div>
+    </div>
+    </div>
+    <footer></footer> 
+    <script>
+        // Music Playing Function
+        const audio = document.getElementById('myAudio');
+        const playPauseButton = document.getElementById('playPauseButton');
+        function PlayandPauseAudio() {
+            if (audio.paused) {
+                audio.play();
+                playPauseButton.textContent = '▮▮';
+            } else {
+                audio.pause();
+                playPauseButton.textContent = '▶';
+            }
+        }
+
+        // Calendar Function
+        document.addEventListener("DOMContentLoaded", () => {
+            const calendarDates = document.getElementById('calendar-dates');
+            const monthYearDisplay = document.getElementById('month-year');
+            let currentDate = new Date(2024, 2, 1); 
+
+            // Define the skiing season (start and end months/days)
+            const skiingSeasonStartMonth = 5; // December
+            const skiingSeasonStartDay = 18; 
+            const skiingSeasonEndMonth = 7;
+            const skiingSeasonEndDay = 15; 
+
+            // Array of Important Date (example)
+            const skiDates = [
+                new Date(2023, 11, 9), 
+                new Date(2024, 2, 3), 
+                new Date(2024, 4, 20), 
+                new Date(2024, 11, 9), 
+                new Date(2025, 2, 3), 
+                new Date(2025, 4, 20)
+            ];
+
+            function generateCalendar() {
+                const year = currentDate.getFullYear();
+                const month = currentDate.getMonth();
+
+                monthYearDisplay.textContent = currentDate.toLocaleString('default', { month: 'long', year: 'numeric' });
+                calendarDates.innerHTML = '';
+
+                const firstDay = new Date(year, month, 1).getDay();
+                const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+                // Fill in empty divs for the days before the first day of the month
+                for (let i = 0; i < firstDay; i++) {
+                    const emptyDiv = document.createElement('div');
+                    calendarDates.appendChild(emptyDiv);
+                }
+
+                // Fill in the actual days of the month
+                for (let day = 1; day <= daysInMonth; day++) {
+                    const dayDiv = document.createElement('div');
+                    dayDiv.textContent = day;
+
+                    const currentDayDate = new Date(year, month, day);
+
+                    // Check if the current date is within the skiing season
+                    const isInSkiingSeason =
+                        (month === skiingSeasonStartMonth && day >= skiingSeasonStartDay) || // December
+                        (month === 0) || // January (all days)
+                        (month === 1 && day <= skiingSeasonEndDay); // February (up to 30)
+
+                    if (isInSkiingSeason) {
+                        dayDiv.classList.add('ski-season'); // Highlight the skiing season days
+                    }
+
+                    // Check if the current date is a ski date
+                    if (skiDates.some(skiDate => skiDate.toDateString() === currentDayDate.toDateString())) {
+                        dayDiv.classList.add('ski-day'); // Add a class for ski days
+                    }
+
+                    // Highlight today's date
+                    if (day === new Date().getDate() && currentDate.getMonth() === new Date().getMonth() && currentDate.getFullYear() === new Date().getFullYear()) {
+                        dayDiv.classList.add('today');
+                    }
+
+                    calendarDates.appendChild(dayDiv);
+                }
+            }
+            document.getElementById('prev-month').addEventListener('click', () => {
+                currentDate.setMonth(currentDate.getMonth() - 1);
+                generateCalendar();
+            });
+
+            document.getElementById('next-month').addEventListener('click', () => {
+                currentDate.setMonth(currentDate.getMonth() + 1);
+                generateCalendar();
+            });
+
+            generateCalendar();
+        });
+
+        // Opening and Closing Modal
+        document.addEventListener('DOMContentLoaded', function() {
+            const modal = document.getElementById('info-modal');
+            const infoButton = document.getElementById('info-button');
+            const closeButton = document.querySelector('.close-button');
+
+            // Open modal when info button is clicked
+            infoButton.addEventListener('click', function() {
+                modal.style.display = 'block';
+            });
+
+            // Close modal when the close button is clicked
+            closeButton.addEventListener('click', function() {
+                modal.style.display = 'none';
+            });
+
+            // Close modal when clicking outside of the modal content
+            window.addEventListener('click', function(event) {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+  </body>
+
+</html>
+
+  

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+    
+  <head>
+    <title>Recommendation Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Quicksand:wght@300..700&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Forum&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Quicksand:wght@300..700&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <body>
+    <header>
+        <nav class = "main-nav main-container">
+            <div class = "logo"> 💖 TJB X GYF </div>
+            <audio id="myAudio" src="playlist.mp3"></audio>
+            <button class="play-button round-button" id="playPauseButton" onclick="PlayandPauseAudio()">▶</button>
+        </nav>
+        <div class = "header-content">
+            <h1>Overview</h1>
+            <div class = "header_button main-container">
+                <button><a href="index.html">Home Page</a></button>
+                <button><a href="ski_vlog.html">Daily Vlog</a></button>
+                <button><a href="aboutme.html">About Us</a></button>
+            </div>
+        </div>
+    </header>
+    
+    <!-- The sidebar that showcases the skiing tip -->
+    <div id="Sidebar">
+        <button onclick="sidebar_close()">Close &times;</button>
+        <h2>我们的约定：</h2>
+        <ul>
+            <li>
+                <strong>1. 要永远爱对方</strong>
+                <ul>
+                    <li>不管发生了什么！我们都应该爱彼此哇</li>
+                    <li>如果吵架啦！要说难听的话也要先想想是不是一定要说出来哦</li>
+                </ul>
+            </li>
+            <li>
+                <strong>2. 每天发520</strong>
+                <ul>
+                    <li>这是独属于我们的小习惯！</li>
+                    <li>所以千万不要忘记啦</li>
+                </ul>
+            </li>
+            <li>
+                <strong>3. 时时刻刻都要分享日常</strong>
+                <ul>
+                    <li>我感觉啦！我们要分清楚报备和分享，小宝宝更喜欢你的分享哦！</li>
+                    <li>这样子我就会觉得如果我们异地恋啦！也不用怕哇！</li>
+                </ul>
+            </li>
+            <li>
+                <strong>4. 要照顾好小狗妃和小家宝</strong>
+                <ul>
+                    <li>嘿嘿感觉小宝宝一直都照顾的很好哇！！可能是老婆还需要努力！</li>
+                    <li>我们应该多用用那个分享群哦！拍摄他们的日常哇</li>
+                </ul>
+            </li>
+            <li>
+                <strong>5. 多用小群！！！！</strong>
+                <ul>
+                    <li>咕噜有种感觉就是我们根本就不用！</li>
+                    <li>所以小宝宝希望我们可以多用用啦！嘿嘿可能慢慢有这个意识就好啦！</li>
+                </ul>
+            </li>
+            <li>
+                <strong>6. 希望小宝宝别忘记快乐</strong>
+                <ul>
+                    <li>虽然我们经常吵架让你不开心！</li>
+                    <li>我希望我给你带来的快乐要远远大于不开心（如果没有做到的话！小宝宝还需要努力哦！）</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+      
+    <div id="Main-Content">
+        <button id="openNav" onclick="sidebar_open()">&#9776;</button>
+
+        <!-- The recommending skiing resorts with my personal rating system -->
+        <div class = "main-container" id="resort-recommendation-card-container">
+            <div class="main-container" id="resort-recommend-card">
+                <div class="resort-card-image">
+                    <img src="shejian.JPG" alt="Tufting Image">
+                    <h2>Memory #1 Tufting</h2>
+                    <p>排名不分先后哦，小宝宝觉得那是我们第一次！一起那么有耐心的完成一个作品哇而且我觉得很好看！</p>
+                </div>
+                <div class="resort-card-content">
+                    <div class="rating">
+                        <span class="fa fa-star" id="checked"></span>
+                        <span class="fa fa-star" id="checked"></span>
+                        <span class="fa fa-star" id="checked"></span>
+                        <span class="fa fa-star" id="checked"></span>
+                        <span class="fa fa-star" id="checked"></span>
+                    </div>
+                    <p><strong>Location:</strong> 壹方天地 </p>
+                    <p><strong>Date:</strong> 20-07-2024 </p>
+                    <p><strong>What's Special About it:</strong> 可爱！第一次！ </p>
+                    <p><strong>TJB Opinion:</strong> 告诉我！</p>
+                    <p><strong>GYF Opinion:</strong> 超爱的！</p>
+                    <p><strong>Should We GO AGAIN:</strong> YESSSSSS BUT 我们有好多空的时候</p>
+                    <p><strong>Improvement? </strong> 咕嚕 感覺中途的時候有點點痛苦</p>
+                    <button class="round-button" id="heart-button" data-id="resort1" onclick="clickCounter(this)">&hearts;</button>
+                    <p>Likes: <span id="heart-resort1">0</span></p>
+                </div>
+            </div>
+        </div>
+        <div class = "main-container" id="resort-recommendation-card-container">
+            <div class="main-container" id="resort-recommend-card">
+                <div class="resort-card-image">
+                    <img src="mian.JPG" alt="Resort Image">
+                    <h2>Memory #2 吃麵麵</h2>
+                    <p>之前咳咳咳之後都回來吃麵麵！！</p>
+                </div>
+                <div class="resort-card-content">
+                    <div class="rating">
+                        <span class="fa fa-star" id="checked"></span>
+                        <span class="fa fa-star" id="checked"></span>
+                        <span class="fa fa-star" id="checked"></span>
+                        <span class="fa fa-star" id="checked"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <p><strong>Location:</strong> 海岸城 </p>
+                    <p><strong>Date:</strong> 咳咳咳好像每週都是吧之前 </p>
+                    <p><strong>What's Special About it:</strong> ERMM 面不重要 重要的是吃麵之前發生的事情 </p>
+                    <p><strong>TJB Opinion:</strong> 告诉我！</p>
+                    <p><strong>GYF Opinion:</strong> 有點點虛虛的 butt很開心</p>
+                    <p><strong>Should We GO AGAIN:</strong> YESSSSSS </p>
+                    <p><strong>Improvement? </strong> 咕嚕 希望多點我的幸福moment！！</p>
+                    <button class="round-button" id="heart-button" data-id="resort2" onclick="clickCounter(this)">&hearts;</button>
+                    <p>Likes: <span id="heart-resort2">0</span></p>
+                </div>
+            </div>
+        </div>
+        <div class = "main-container" id="resort-recommendation-card-container">
+            <div class="main-container" id="resort-recommend-card">
+                <div class="resort-card-image">
+                    <img src="senior.JPG" alt="Resort Image">
+                    <h2>Resort #3 Senior Social</h2>
+                    <p>我們還沒官宣的時候！！</p>
+                </div>
+                <div class="resort-card-content">
+                    <div class="rating">
+                        <span class="fa fa-star" id="checked"></span>
+                        <span class="fa fa-star" id="checked"></span>
+                        <span class="fa fa-star" id="checked"></span>
+                        <span class="fa fa-star" id="checked"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <p><strong>Location:</strong> The ISF Academy </p>
+                    <p><strong>Date:</strong> 2-3-2025 </p>
+                    <p><strong>What's Special About it:</strong> 小寶寶第一次穿裙裙！ </p>
+                    <p><strong>TJB Opinion:</strong> 告诉我！</p>
+                    <p><strong>GYF Opinion:</strong> 超級超級開心！看到帥帥的TJB </p>
+                    <p><strong>Should We GO AGAIN:</strong> 咕嚕！！YESSSSSS </p>
+                    <p><strong>Improvement? </strong> 希望多點我們兩個的相處機會啦！</p>
+                    <button class="round-button" id="heart-button" data-id="resort3" onclick="clickCounter(this)">&hearts;</button>
+                    <p>Likes: <span id="heart-resort3">0</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer></footer> 
+    <script>
+        // Music Playing Code
+        const audio = document.getElementById('myAudio');
+        const playPauseButton = document.getElementById('playPauseButton');
+
+        function PlayandPauseAudio() {
+            if (audio.paused) {
+                audio.play();
+                playPauseButton.textContent = '▮▮'; // Change to pause symbol
+            } else {
+                audio.pause();
+                playPauseButton.textContent = '▶'; // Change to play symbol
+            }
+        }
+
+        // Liking System
+        function clickCounter(button) {
+        const resortId = button.getAttribute('data-id');
+        const heartSpan = document.getElementById(`heart-${resortId}`);
+        
+        let clickCount = localStorage.getItem(resortId) || 0;
+        clickCount = Number(clickCount) + 1;
+
+        localStorage.setItem(resortId, clickCount);
+        heartSpan.innerHTML = clickCount;
+        }
+        
+        window.onload = function() {
+            const resorts = ['resort1', 'resort2','resort3'];
+            resorts.forEach(resort => {
+                const heartSpan = document.getElementById(`heart-${resort}`);
+                heartSpan.innerHTML = localStorage.getItem(resort) || 0;
+            });
+        };
+
+        // Siderbar 
+        function sidebar_open() {
+            document.getElementById("Sidebar").style.display = "block";
+            document.getElementById("Main-Content").style.marginLeft = "15%";
+            document.getElementById("openNav").style.display = 'none';
+        }
+
+        function sidebar_close() {
+            document.getElementById("Sidebar").style.display = "none";
+            document.getElementById("Main-Content").style.marginLeft = "0%";
+            document.getElementById("openNav").style.display = "inline-block";
+        }
+    </script>
+  </body>
+</html>
